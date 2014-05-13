@@ -35,7 +35,8 @@
                         <username>tomcat</username>
                         <password>123456</password>
                         <uriEncoding>utf-8</uriEncoding>
-                        <path>/tbss</path>
+                        <path>/</path>
+                        <port>80</port>
                         <update>false</update>
                         <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
                     </configuration>
