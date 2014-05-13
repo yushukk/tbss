@@ -10,6 +10,39 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tbss-web</artifactId>
+    <packaging>war</packaging>
+    <name>tbss-web</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>tbss-core-action</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- 设置war包名称 -->
+        <finalName>tbss</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>tomcat-maven-plugin</artifactId>
+                    <version>1.1</version>
+                    <configuration>
+                        <username>tomcat</username>
+                        <password>123456</password>
+                        <uriEncoding>utf-8</uriEncoding>
+                        <path>/tbss</path>
+                        <update>false</update>
+                        <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 
 </project>

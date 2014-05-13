@@ -19,6 +19,7 @@
         <module>tbss-ext-facade</module>
         <module>tbss-ext-facade-impl</module>
         <module>tbss-ext-integration</module>
+        <module>tbss-common-utils</module>
     </modules>
 
 
