@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tbss-core-action</artifactId>
+    <name>tbss-core-action</name>
 
     <dependencies>
         <dependency>
