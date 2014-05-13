@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.erik.git.tbss</groupId>
+    <artifactId>tbss</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>tbss-web</module>
+        <module>tbss-core-biz</module>
+        <module>tbss-core-service</module>
+        <module>tbss-core-dao</module>
+        <module>tbss-core-action</module>
+        <module>tbss-core-model</module>
+        <module>tbss-core-vo</module>
+        <module>tbss-ext-facade</module>
+        <module>tbss-ext-facade-impl</module>
+        <module>tbss-ext-integration</module>
+    </modules>
+
+
+</project>
