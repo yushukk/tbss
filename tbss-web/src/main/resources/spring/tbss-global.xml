@@ -53,4 +53,39 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
+    <bean id="commonInterceptor"
+          class="org.erik.common.interceptor.interceptor.CommonInterceptor">
+    </bean>
+
+    <bean id="transactionInterceptor"
+          class="org.erik.common.interceptor.interceptor.TransactionInterceptor">
+        <property name="transactionTemplate" ref="transactionTemplate"/>
+    </bean>
+
+    <bean id="globalInterceptor"
+          class="org.erik.common.interceptor.interceptor.GlobalInterceptor">
+        <property name="interceptorFactory">
+            <map>
+                <entry key="default_interceptor" value-ref="commonInterceptor"/>
+                <entry key="create*" value-ref="transactionInterceptor"/>
+                <entry key="update*" value-ref="transactionInterceptor"/>
+                <entry key="delete*" value-ref="transactionInterceptor"/>
+                <entry key="create*" value-ref="transactionInterceptor"/>
+                <entry key="add*" value-ref="transactionInterceptor"/>
+                <entry key="save*" value-ref="transactionInterceptor"/>
+                <entry key="remove*" value-ref="transactionInterceptor"/>
+                <entry key="edit*" value-ref="transactionInterceptor"/>
+            </map>
+        </property>
+    </bean>
+
+    <aop:config>
+        <!--异常拦截器切入点 -->
+        <aop:pointcut id="exceptionInterceptor"
+                      expression="execution(* org.erik.biz.manager.impl.*.*(..) )"/>
+        <!--在该切入点使用自定义拦截器 -->
+        <aop:advisor pointcut-ref="exceptionInterceptor"
+                     advice-ref="globalInterceptor"/>
+    </aop:config>
+
 </beans>

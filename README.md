@@ -4,4 +4,9 @@
 --
 以便以后快速搭建项目
 --
-加入spring mvc 和 velocity
+1.2 加入spring mvc 和 velocity
+--
+1.3 加入db配置和mybatis
+--
+1.4 加入异常拦截器
+
