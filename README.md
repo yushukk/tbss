@@ -4,3 +4,4 @@
 --
 以便以后快速搭建项目
 --
+加入spring mvc 和 velocity
